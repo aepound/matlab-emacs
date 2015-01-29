@@ -1,0 +1,35 @@
+This repository is a cvsimport of the CVS repository of the 
+official sourceforge matlab-emacs project. 
+My goal in creating this was to be able to easily update to 
+the newest official version of matlab-emacs.  
+The idea of using git appealed to me, as I'm not very 
+familiar with CVS. Plus it also lets me use this repo as 
+a submodule in another repo I have.
+
+The steps to get this working are fairly simple.
+0. Install git (obviously) and git-cvs.
+
+1. Clone the repo with the mirroring capabilities of git:
+> git clone --mirror original-repo.git path/to/repo/.git
+> cd path/to/repo
+> git config --bool core.bare false
+> git checkout cvsimport
+
+2. Run the command ./setup_cvsimport
+
+3. Go back to the master branch.
+
+4. Run CVSimport
+> git cvsimport
+
+**** Important ****
+If you have decided to hack on matlab-emacs, I highly suggest that 
+you do so in another branch, leaving master as a pristine copy of 
+the CVS repo.  If you'd like to contribute back upstream, you'll 
+want to look into git cvsexportcommit.
+
+Good luck.
+Any questions, let me know.
+Thanks,
+Andrew Pound
+aepound@gmail.com
