@@ -1,0 +1,3 @@
+#!/bin/bash
+
+git cvsimport -d :pserver:anonymous@matlab-emacs.cvs.sourceforge.net:/cvsroot/matlab-emacs -r cvs matlab-emacs
